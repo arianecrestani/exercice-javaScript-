@@ -80,7 +80,7 @@ const titles = movieList
   .map(({ title }) => title);
 console.log(titles);
 
-//Get titles of movies with an IMDB rating greater or equal to 7.5
+//Get titles of movies with an IMDB rating greater or equal to 7.0
 
 const bestTitles = [];
 for (const movie of movieList) {
@@ -132,3 +132,4 @@ console.log(ratingSum);
 const averageRating = ratingSum / nolanMovieList.length;
 
 console.log(averageRating);
+
