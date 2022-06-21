@@ -139,7 +139,7 @@ const titles = movies => movies.map(movie => movie.title)
 console.log(titles(movieList));
 
 
-//Higher Order Functions
+//
 
 // Filter movies by IMDB rating, then creates a movie titles array
 const bestTitles = movies =>  movies.filter((movie) => movie.imdbRating >= 7.5).map((movie) => movie.title);
