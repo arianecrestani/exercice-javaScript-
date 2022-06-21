@@ -90,9 +90,7 @@ for (const movie of movieList) {
 }
 console.log(bestTitles);
 
-const bestTitles = movieList
-  .filter(({ imdbRating }) => imdbRating >= 7.0)
-  .map(({ title }) => title);
+const bestTitles = movieList.filter(({ imdbRating }) => imdbRating >= 7.0).map(({ title }) => title);
 
 console.log(bestTitles);
 
@@ -108,6 +106,8 @@ console.log(
     nolanMovieList.length +
     " Christopher Nolan movies in the list."
 );
+
+
 
 // Compute average movie rating of Christopher Nolan's movies
 let ratingSum = 0;
@@ -132,4 +132,22 @@ console.log(ratingSum);
 const averageRating = ratingSum / nolanMovieList.length;
 
 console.log(averageRating);
+// Return a new array containing only movie titles
 
+const titles = movies => movies.map(movie => movie.title)
+
+console.log(titles(movieList));
+
+
+//Higher Order Functions
+
+// Filter movies by IMDB rating, then creates a movie titles array
+const bestTitles = movies =>  movies.filter((movie) => movie.imdbRating >= 7.5).map((movie) => movie.title);
+
+console.log(bestTitles(movieList));
+
+const joelSchumacher = movies => movies.filter(({ director }) => director === "Joel Schumacher").map(({ title }) => title)
+console.log(joelSchumacher(movieList))
+
+const olderMovies = movies => movies.filter(({ year }) => year <= 2000).map(({ title }) => title)
+console.log(olderMovies(movieList))
